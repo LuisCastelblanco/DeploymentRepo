@@ -1,0 +1,5 @@
+Hola para desplegar solamente debiste haber clonado este repo
+
+ y poner 
+
+docker-compose up --build        uwu

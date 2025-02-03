@@ -4,7 +4,7 @@ services:
   backend:
     build:
       context: https://github.com/LuisCastelblanco/TaskTracker.git#main
-      dockerfile: Dockerfile
+      dockerfile: DockerFile
     ports:
       - "8000:8000"
     environment:
@@ -17,11 +17,11 @@ services:
   frontend:
     build:
       context: https://github.com/LuisCastelblanco/taskmanager.git#main
-      dockerfile: Dockerfile
+      dockerfile: DockerFile
     ports:
       - "3000:3000"
     environment:
-      - REACT_APP_API_URL=http://localhost:8000
+      - VITE_API_URL=http://localhost:8000
     depends_on:
       - backend
     networks:
